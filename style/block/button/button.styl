@@ -1,0 +1,29 @@
+.button
+  position relative
+  width 118px
+  height 32px
+  border 1px solid #4eb7a8
+  border-bottom none
+  outline none
+  color #4eb7a8
+  background-color #fff
+  box-shadow 0px 3px 0px 0px #4eb7a8
+  border-radius 2px
+  font-family 'Lato', sans-serif
+  font-weight bold
+  font-size 12px
+  text-transform uppercase
+  cursor pointer
+  transition 0.5s
+
+.button:hover
+  color #fff
+  background-color #4eb7a8
+  box-shadow: 0px 3px 0px 0px #28a290
+
+.button:active
+  animation click-button 100ms linear forwards
+
+@keyframes click-button
+  0%   {top: 0px;}
+  100% {top: 3px; box-shadow none;}

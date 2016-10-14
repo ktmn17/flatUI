@@ -1,0 +1,20 @@
+.button_ripple
+  overflow hidden
+
+.ripple-effect
+  position absolute
+  width 40px
+  height 40px
+  border-radius 50%
+  background-color white
+  animation ripple-effect 2s
+
+@keyframes ripple-effect {
+  from {
+    opacity 0.4
+  }
+  to {
+    opacity 0
+    transform scale(20)
+  }
+}

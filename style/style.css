@@ -1,0 +1,126 @@
+.button {
+  position: relative;
+  width: 118px;
+  height: 32px;
+  border: 1px solid #4eb7a8;
+  border-bottom: none;
+  outline: none;
+  color: #4eb7a8;
+  background-color: #fff;
+  box-shadow: 0px 3px 0px 0px #4eb7a8;
+  border-radius: 2px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.button:hover {
+  color: #fff;
+  background-color: #4eb7a8;
+  box-shadow: 0px 3px 0px 0px #28a290;
+}
+.button:active {
+  animation: click-button 100ms linear forwards;
+}
+@-moz-keyframes click-button {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: 3px;
+    box-shadow: none;
+  }
+}
+@-webkit-keyframes click-button {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: 3px;
+    box-shadow: none;
+  }
+}
+@-o-keyframes click-button {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: 3px;
+    box-shadow: none;
+  }
+}
+@keyframes click-button {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: 3px;
+    box-shadow: none;
+  }
+}
+.button_ripple {
+  overflow: hidden;
+}
+.ripple-effect {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  animation: ripple-effect 2s;
+}
+@-moz-keyframes ripple-effect {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 0;
+    transform: scale(20);
+  }
+}
+@-webkit-keyframes ripple-effect {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 0;
+    transform: scale(20);
+  }
+}
+@-o-keyframes ripple-effect {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 0;
+    transform: scale(20);
+  }
+}
+@keyframes ripple-effect {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 0;
+    transform: scale(20);
+  }
+}
+.button_size_small {
+  width: 78px;
+  height: 22px;
+  font-size: 10px;
+}
+.button_color_alternate {
+  color: #e75735;
+  border-color: #e75735;
+  box-shadow: 0px 3px 0px 0px #bf3e1f;
+}
+.button_color_alternate:hover {
+  background-color: #e75735;
+  box-shadow: 0px 3px 0px 0px #bf3e1f;
+}
+.button {
+  margin: 10px;
+}
