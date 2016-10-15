@@ -4,11 +4,37 @@ html(lang="en")
     title flatUI
     meta(charset="UTF-8")
     link(href="style/style.css", rel="stylesheet")
-    link(href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Lato:300i,400,700" rel="stylesheet")
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
     script(src="style/block/button/button_ripple.js")
+
   body
-    button.button.button_ripple.button_size_small(type="button" value="button") button
-    button.button.button_ripple(type="button" value="button") button
-    button.button.button_ripple.button_color_alternate(type="button" value="button") button
-    button.button.button_ripple.button_size_small.button_color_alternate(type="button" value="button") button
+
+    div.buttons
+    button.button.button_ripple.button_size_small(value="button") button
+    button.button.button_ripple(value="button") button
+    button.button.button_ripple.button_color_alternate(value="button") button
+    button.button.button_ripple.button_size_small.button_color_alternate(value="button") button
+
+    div.array-buttons
+    button.arrow-button(value="arrow-button")
+      svg.svg-arrow-button
+        polyline.arrow(points="19,6 8,17 19,27")
+    button.arrow-button(value="arrow-button")
+      svg.svg-arrow-button
+        polyline.arrow(points="11,6 22,17 11,27")
+    button.arrow-button.arrow-button_disabled(value="arrow-button")
+      svg.svg-arrow-button
+        polyline.arrow(points="19,6 8,17 19,27")
+    button.arrow-button.arrow-button_disabled(value="arrow-button")
+      svg.svg-arrow-button
+        polyline.arrow(points="11,6 22,17 11,27")
+
+    div.circles
+      div.info-circle
+        svg.circle-percentage
+          circle.circle-percentage__ring
+            animate(dur="5s")
+        input.circle-percentage__input(type="text" value="38")
+
+    script(src="style/block/circle/percentage/percentage.js")

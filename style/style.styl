@@ -1,7 +1,22 @@
-@import "block\button\button"
-@import "block\button\button_ripple"
-@import "block\button\button_size_small"
-@import "block\button\button_color_alternate"
+maincolor = #4eb7a8
+alternatecolor = #e75735
+mainfont = 'Lato', sans-serif
+
+@import "block\button\button.styl"
+@import "block\button\button_ripple.styl"
+@import "block\button\button_size_small.styl"
+@import "block\button\button_color_alternate.styl"
+
+@import "block\arrow-button\arrow-button.styl"
+@import "block\arrow-button\arrow-button_disabled.styl"
+
+@import "block\circle\percentage\percentage.styl"
+
+body
+  font-family mainfont
 
 .button
+  margin 10px
+
+.arrow-button
   margin 10px

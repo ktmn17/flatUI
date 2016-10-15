@@ -2,14 +2,14 @@
   position relative
   width 118px
   height 32px
-  border 1px solid #4eb7a8
+  border 1px solid maincolor
   border-bottom none
   outline none
-  color #4eb7a8
+  color maincolor
   background-color #fff
-  box-shadow 0px 3px 0px 0px #4eb7a8
+  box-shadow 0px 3px 0px 0px darken(maincolor, 20%)
   border-radius 2px
-  font-family 'Lato', sans-serif
+  font-family mainfont
   font-weight bold
   font-size 12px
   text-transform uppercase
@@ -18,8 +18,8 @@
 
 .button:hover
   color #fff
-  background-color #4eb7a8
-  box-shadow: 0px 3px 0px 0px #28a290
+  background-color maincolor
+  box-shadow: 0px 3px 0px 0px darken(maincolor, 20%)
 
 .button:active
   animation click-button 100ms linear forwards
