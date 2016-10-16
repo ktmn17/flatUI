@@ -10,7 +10,7 @@ function main() {
     div.addClass('ripple-effect')
     .css({
       left: clickX - 20,
-      top: clickY - 20
+      top: clickY - 20      
     })
     .appendTo($(this));
 

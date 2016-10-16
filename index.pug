@@ -6,35 +6,44 @@ html(lang="en")
     link(href="style/style.css", rel="stylesheet")
     link(href="https://fonts.googleapis.com/css?family=Lato:300i,400,700" rel="stylesheet")
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
-    script(src="style/block/button/button_ripple.js")
+    script(src="jQuery_plugins/Inputmask-3.x/js/inputmask.js")
+    script(src="jQuery_plugins/Inputmask-3.x/js/inputmask.extensions.js")
+    script(src="jQuery_plugins/Inputmask-3.x/js/jquery.inputmask.js")
 
   body
-
     div.buttons
-    button.button.button_ripple.button_size_small(value="button") button
-    button.button.button_ripple(value="button") button
-    button.button.button_ripple.button_color_alternate(value="button") button
-    button.button.button_ripple.button_size_small.button_color_alternate(value="button") button
+      button.button.button_ripple.button_size_small(value="button") button
+      button.button.button_ripple(value="button") button
+      button.button.button_ripple.button_color_alternate(value="button") button
+      button.button.button_ripple.button_size_small.button_color_alternate(value="button") button
 
     div.array-buttons
-    button.arrow-button(value="arrow-button")
-      svg.svg-arrow-button
-        polyline.arrow(points="19,6 8,17 19,27")
-    button.arrow-button(value="arrow-button")
-      svg.svg-arrow-button
-        polyline.arrow(points="11,6 22,17 11,27")
-    button.arrow-button.arrow-button_disabled(value="arrow-button")
-      svg.svg-arrow-button
-        polyline.arrow(points="19,6 8,17 19,27")
-    button.arrow-button.arrow-button_disabled(value="arrow-button")
-      svg.svg-arrow-button
-        polyline.arrow(points="11,6 22,17 11,27")
+      button.arrow-button(value="arrow-button")
+        svg.arrow-button__svg
+          polyline.arrow-button__svg-polyline(points="19,6 8,17 19,27")
+      button.arrow-button(value="arrow-button")
+        svg.arrow-button__svg
+          polyline.arrow-button__svg-polyline(points="11,6 22,17 11,27")
+      button.arrow-button.arrow-button_disabled(value="arrow-button")
+        svg.arrow-button__svg
+          polyline.arrow-button__svg-polyline(points="19,6 8,17 19,27")
+      button.arrow-button.arrow-button_disabled(value="arrow-button")
+        svg.arrow-button__svg
+          polyline.arrow-button__svg-polyline(points="11,6 22,17 11,27")
 
     div.circles
-      div.info-circle
-        svg.circle-percentage
-          circle.circle-percentage__ring
-            animate(dur="5s")
-        input.circle-percentage__input(type="text" value="38")
+      div.circle-percentage
+        svg.circle-percentage__svg
+          circle.circle-percentage__svg-ring
+        input.circle-percentage__input.numeric(type="text" value="33")
+      div.circle-percentage
+        svg.circle-percentage__svg
+          circle.circle-percentage__svg-ring
+        input.circle-percentage__input.numeric(type="text" value="66")
+      div.circle-percentage
+        svg.circle-percentage__svg
+          circle.circle-percentage__svg-ring
+        input.circle-percentage__input.numeric(type="text" value="100")
 
+    script(src="style/block/button/button_ripple.js")
     script(src="style/block/circle/percentage/percentage.js")
