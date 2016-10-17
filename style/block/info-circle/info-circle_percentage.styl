@@ -1,0 +1,21 @@
+.info-circle__input-percentage
+  position absolute
+  top 25%
+  left 25%
+  width 50px
+  border none
+  outline none
+  color #9d9d9d
+  font-size 40px
+  font-family mainfont
+  font-style italic
+  text-align center
+  transition 0.5s
+
+.info-circle__input-percentage:hover
+  animation input-hover 900ms infinite linear
+
+@keyframes input-hover
+  25%   {transform: translateY(-1px)}
+  75% {transform: translateY(1px)}
+  100% {transform: translateY(0px)}

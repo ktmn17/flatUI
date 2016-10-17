@@ -1,0 +1,55 @@
+.info-circle_pie-chart
+  width 200px
+
+.info-circle__svg_pie-chart
+  width 50%
+
+
+.info-circle__svg-ring_pie-chart
+  r 41
+  cx 50%
+  cy 50%
+  stroke #e5e5e5
+  stroke-width 17px
+
+  &_gray
+    stroke #e5e5e5
+
+  &_maincolor
+    stroke maincolor
+    stroke-dasharray 150 150
+
+  &_alternatecolor
+    stroke alternatecolor
+    stroke-dasharray 75 235
+
+  &_dark-gray
+    stroke #747474
+    stroke-dasharray 30 270
+
+.inputs-pie-chart
+  position absolute
+  left 55%
+  top 25%
+
+.info-circle__input-pie-chart
+  display inline-block
+  width 35px
+  font-size 17px
+  text-align center
+  margin 0px
+  border none
+  font-family mainfont
+  outline none
+
+  &_gray
+    color #e5e5e5
+
+  &_maincolor
+    color maincolor
+
+  &_alternatecolor
+    color alternatecolor
+
+  &_dark-gray
+    color #747474

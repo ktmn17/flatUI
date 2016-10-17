@@ -161,27 +161,27 @@
 .arrow-button_disabled:hover .arrow-button__svg-polyline {
   stroke: #fff;
 }
-.circle-percentage {
+.info-circle {
   position: relative;
   display: inline-block;
   width: 100px;
   height: 100px;
   transition: 0.5s;
 }
-.circle-percentage__svg {
+.info-circle__svg {
   width: 100%;
   height: 100%;
   transform: rotate(-90deg);
 }
-.circle-percentage__svg-ring {
-  fill: #fff;
+.info-circle__svg-ring {
+  fill: none;
   r: 47;
   cx: 50%;
   cy: 50%;
   stroke: #e75735;
   stroke-width: 5;
 }
-.circle-percentage__input {
+.info-circle__input-percentage {
   position: absolute;
   top: 25%;
   left: 25%;
@@ -195,7 +195,7 @@
   text-align: center;
   transition: 0.5s;
 }
-.circle-percentage__input:hover {
+.info-circle__input-percentage:hover {
   animation: input-hover 900ms infinite linear;
 }
 @-moz-keyframes input-hover {
@@ -242,11 +242,66 @@
     transform: translateY(0px);
   }
 }
+.info-circle_pie-chart {
+  width: 200px;
+}
+.info-circle__svg_pie-chart {
+  width: 50%;
+}
+.info-circle__svg-ring_pie-chart {
+  r: 41;
+  cx: 50%;
+  cy: 50%;
+  stroke: #e5e5e5;
+  stroke-width: 17px;
+}
+.info-circle__svg-ring_pie-chart_gray {
+  stroke: #e5e5e5;
+}
+.info-circle__svg-ring_pie-chart_maincolor {
+  stroke: #4eb7a8;
+  stroke-dasharray: 150 150;
+}
+.info-circle__svg-ring_pie-chart_alternatecolor {
+  stroke: #e75735;
+  stroke-dasharray: 75 235;
+}
+.info-circle__svg-ring_pie-chart_dark-gray {
+  stroke: #747474;
+  stroke-dasharray: 30 270;
+}
+.inputs-pie-chart {
+  position: absolute;
+  left: 55%;
+  top: 25%;
+}
+.info-circle__input-pie-chart {
+  display: inline-block;
+  width: 35px;
+  font-size: 17px;
+  text-align: center;
+  margin: 0px;
+  border: none;
+  font-family: 'Lato', sans-serif;
+  outline: none;
+}
+.info-circle__input-pie-chart_gray {
+  color: #e5e5e5;
+}
+.info-circle__input-pie-chart_maincolor {
+  color: #4eb7a8;
+}
+.info-circle__input-pie-chart_alternatecolor {
+  color: #e75735;
+}
+.info-circle__input-pie-chart_dark-gray {
+  color: #747474;
+}
 body {
   font-family: 'Lato', sans-serif;
 }
 .button,
 .arrow-button,
-.circle-percentage {
+.info-circle {
   margin: 10px;
 }

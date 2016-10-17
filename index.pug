@@ -11,13 +11,17 @@ html(lang="en")
     script(src="jQuery_plugins/Inputmask-3.x/js/jquery.inputmask.js")
 
   body
+
     div.buttons
+
       button.button.button_ripple.button_size_small(value="button") button
       button.button.button_ripple(value="button") button
       button.button.button_ripple.button_color_alternate(value="button") button
       button.button.button_ripple.button_size_small.button_color_alternate(value="button") button
 
+
     div.array-buttons
+
       button.arrow-button(value="arrow-button")
         svg.arrow-button__svg
           polyline.arrow-button__svg-polyline(points="19,6 8,17 19,27")
@@ -31,19 +35,37 @@ html(lang="en")
         svg.arrow-button__svg
           polyline.arrow-button__svg-polyline(points="11,6 22,17 11,27")
 
-    div.circles
-      div.circle-percentage
-        svg.circle-percentage__svg
-          circle.circle-percentage__svg-ring
-        input.circle-percentage__input.numeric(type="text" value="33")
-      div.circle-percentage
-        svg.circle-percentage__svg
-          circle.circle-percentage__svg-ring
-        input.circle-percentage__input.numeric(type="text" value="66")
-      div.circle-percentage
-        svg.circle-percentage__svg
-          circle.circle-percentage__svg-ring
-        input.circle-percentage__input.numeric(type="text" value="100")
+
+    div.info-circles
+
+      div.info-circle
+        svg.info-circle__svg
+          circle.info-circle__svg-ring.info-circle__svg-ring_percentage
+        input.info-circle__input-percentage(type="text" value="33")
+
+      div.info-circle
+        svg.info-circle__svg
+          circle.info-circle__svg-ring.info-circle__svg-ring_percentage
+        input.info-circle__input-percentage(type="text" value="66")
+
+      div.info-circle
+        svg.info-circle__svg
+          circle.info-circle__svg-ring.info-circle__svg-ring_percentage
+        input.info-circle__input-percentage(type="text" value="100")
+
+      div.info-circle.info-circle_pie-chart
+        svg.info-circle__svg.info-circle__svg_pie-chart
+          circle.info-circle__svg-ring.info-circle__svg-ring_pie-chart.info-circle__svg-ring_pie-chart_gray
+          circle.info-circle__svg-ring.info-circle__svg-ring_pie-chart.info-circle__svg-ring_pie-chart_maincolor
+          circle.info-circle__svg-ring.info-circle__svg-ring_pie-chart.info-circle__svg-ring_pie-chart_alternatecolor
+          circle.info-circle__svg-ring.info-circle__svg-ring_pie-chart.info-circle__svg-ring_pie-chart_dark-gray
+        div.inputs-pie-chart
+          input.info-circle__input-pie-chart.info-circle__input-pie-chart_gray(type="text" value="100")
+          input.info-circle__input-pie-chart.info-circle__input-pie-chart_maincolor(type="text" value="66")
+          input.info-circle__input-pie-chart.info-circle__input-pie-chart_alternatecolor(type="text" value="33")
+          input.info-circle__input-pie-chart.info-circle__input-pie-chart_dark-gray(type="text" value="10")
+
 
     script(src="style/block/button/button_ripple.js")
-    script(src="style/block/circle/percentage/percentage.js")
+    script(src="style/block/info-circle/info-circle_percentage.js")
+    script(src="style/block/info-circle/info-circle_pie-chart.js")
