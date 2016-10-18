@@ -14,8 +14,22 @@ mainfont = 'Lato', sans-serif
 @import "block\info-circle\info-circle_percentage.styl"
 @import "block\info-circle\info-circle_pie-chart.styl"
 
+@import "block\slider\slider.styl"
+@import "block\slider\slider_value-number.styl"
+@import "block\slider\slider_value-range.styl"
+
+
 body
   font-family mainfont
+  width 700px
+  margin 0 auto
 
-.button, .arrow-button, .info-circle
-  margin 10px
+.container
+  display flex
+  justify-content center
+  align-items center
+  margin 30px 0
+
+
+.button, .arrow-button, .info-circle, .slider
+  margin 0 20px

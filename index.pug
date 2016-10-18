@@ -3,16 +3,20 @@ html(lang="en")
   head
     title flatUI
     meta(charset="UTF-8")
-    link(href="style/style.css", rel="stylesheet")
+
     link(href="https://fonts.googleapis.com/css?family=Lato:300i,400,700" rel="stylesheet")
+
+    link(href="style/style.css", rel="stylesheet")
+
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
     script(src="jQuery_plugins/Inputmask-3.x/js/inputmask.js")
     script(src="jQuery_plugins/Inputmask-3.x/js/inputmask.extensions.js")
     script(src="jQuery_plugins/Inputmask-3.x/js/jquery.inputmask.js")
+    script(src="jQuery_plugins/jquery-ui-1.12.1.custom/jquery-ui.js")
 
   body
 
-    div.buttons
+    div.container
 
       button.button.button_ripple.button_size_small(value="button") button
       button.button.button_ripple(value="button") button
@@ -20,7 +24,7 @@ html(lang="en")
       button.button.button_ripple.button_size_small.button_color_alternate(value="button") button
 
 
-    div.array-buttons
+    div.container
 
       button.arrow-button(value="arrow-button")
         svg.arrow-button__svg
@@ -36,7 +40,7 @@ html(lang="en")
           polyline.arrow-button__svg-polyline(points="11,6 22,17 11,27")
 
 
-    div.info-circles
+    div.container
 
       div.info-circle
         svg.info-circle__svg
@@ -65,7 +69,13 @@ html(lang="en")
           input.info-circle__input-pie-chart.info-circle__input-pie-chart_alternatecolor(type="text" value="33")
           input.info-circle__input-pie-chart.info-circle__input-pie-chart_dark-gray(type="text" value="10")
 
+    div.container
+      div.slider.slider_value-number
+        div.ui-slider-handle      
+      div.slider.slider_value-range
+
 
     script(src="style/block/button/button_ripple.js")
     script(src="style/block/info-circle/info-circle_percentage.js")
     script(src="style/block/info-circle/info-circle_pie-chart.js")
+    script(src="jQuery_plugins/jq-ui.js")
