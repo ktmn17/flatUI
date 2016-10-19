@@ -70,12 +70,20 @@ html(lang="en")
           input.info-circle__input-pie-chart.info-circle__input-pie-chart_dark-gray(type="text" value="10")
 
     div.container
-      div.slider.slider_value-number
-        div.ui-slider-handle      
-      div.slider.slider_value-range
+      div.slider-block
+        div.slider-block__slider.slider-block__slider_value-number
+          div.ui-slider-handle
+      div.slider-block
+        div.slider-block__slider.slider-block__slider_value-range
+        div.slider-block__info
+          span 0
+          span 25
+          span 50
+          span 75
+          span 100
 
 
     script(src="style/block/button/button_ripple.js")
     script(src="style/block/info-circle/info-circle_percentage.js")
     script(src="style/block/info-circle/info-circle_pie-chart.js")
-    script(src="jQuery_plugins/jq-ui.js")
+    script(src="style/block/slider/slider.js")
