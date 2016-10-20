@@ -5,8 +5,8 @@ html(lang="en")
     meta(charset="UTF-8")
 
     link(href="https://fonts.googleapis.com/css?family=Lato:300i,400,700" rel="stylesheet")
-
-    link(href="style/style.css", rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet")
+    link(href="style/style.css" rel="stylesheet")
 
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
     script(src="jQuery_plugins/Inputmask-3.x/js/inputmask.js")
@@ -69,21 +69,54 @@ html(lang="en")
           input.info-circle__input-pie-chart.info-circle__input-pie-chart_alternatecolor(type="text" value="33")
           input.info-circle__input-pie-chart.info-circle__input-pie-chart_dark-gray(type="text" value="10")
 
+
     div.container
+
       div.slider-block
         div.slider-block__slider.slider-block__slider_value-number
           div.ui-slider-handle
+
       div.slider-block
         div.slider-block__slider.slider-block__slider_value-range
-        div.slider-block__info
-          span 0
-          span 25
-          span 50
-          span 75
-          span 100
+          ul.slider-block__info
+            - for (var i = 0; i < 101; i += 25)
+              li.slider-block__percentage #[span #{i}]
+
+
+    div.container
+
+      div.stages
+        hr.stages__hr
+        hr.stages__hr.stages__hr_active
+        ul.stages__points
+          - for (var i = 1; i < 4; i ++)
+            li.stages__point.stages__point_active #[span #{i}]
+          - for (var i = 4; i < 6; i ++)
+              li.stages__point #[span #{i}]
+
+
+    div.container
+
+      form.form
+        div.form__name
+          input(type="text" value="Your Name").form__text
+          div.form__text-info.form__text-info_error Error
+        div.form__name
+          input(type="text" value="Your Email").form__text
+          div.form__text-info Thanks!
+        textarea.form__textarea Your Message
+        button.button.form__button-submit(type="submit") submit
+
+      form.form
+        input(type="checkbox").form__toggle
+        input(type="checkbox" checked).form__toggle
+        input(type="checkbox" checked).form__tickbox
+        input(type="checkbox").form__tickbox
+
 
 
     script(src="style/block/button/button_ripple.js")
     script(src="style/block/info-circle/info-circle_percentage.js")
     script(src="style/block/info-circle/info-circle_pie-chart.js")
-    script(src="style/block/slider/slider.js")
+    script(src="style/block/slider-block/slider-block__slider.js")
+    script(src="style/block/stages/stages.js")
