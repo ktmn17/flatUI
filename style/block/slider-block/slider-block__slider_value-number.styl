@@ -10,18 +10,20 @@
     line-height 24px
     background-color alternatecolor
     border-radius 4px
+    font-size 13px
+    font-weight 900
 
     &::after
-      content ''
       @extend .ui-slider-handle
+      content ''
       background-color alternatecolor
       top 34px
       left 8px
 
     &::before
+      content ''
       position absolute
       z-index 0
-      content ''
       top 16px
       left 36%
       width 10px

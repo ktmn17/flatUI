@@ -1,0 +1,42 @@
+.form__toggle
+  display inline-block
+  position relative
+  width 59px
+  height 24px
+  border-radius @height
+  cursor pointer
+  overflow hidden
+  transition 0.5s
+
+.form__toggle-input
+  display none
+
+  &:checked + .form__toggle-slider
+    transform translateX(200%)
+
+.form__toggle-slider
+  position absolute
+  top 12.5%
+  left 5%
+  width 30%
+  height 75%
+  background-color white
+  border-radius 50%
+  transition 1s
+
+
+  &::after
+    content 'off'
+    position absolute
+    top 8%
+    left 130%
+    color white
+    font-size 12px
+    font-weight 900
+    text-transform uppercase
+    letter-spacing 0.5px
+
+  &::before
+    @extend .form__toggle-slider::after
+    content 'on'
+    left -150%

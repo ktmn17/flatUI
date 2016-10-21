@@ -10,9 +10,10 @@
   box-shadow: 0px 3px 0px 0px #3c9488;
   border-radius: 2px;
   font-family: 'Lato', sans-serif;
-  font-weight: bold;
+  font-weight: 900;
   font-size: 12px;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
   cursor: pointer;
   transition: 0.5s;
 }
@@ -193,7 +194,6 @@
   font-family: 'Lato', sans-serif;
   font-style: italic;
   text-align: center;
-  transition: 0.5s;
 }
 .info-circle__input-percentage:hover {
   animation: input-hover 900ms infinite linear;
@@ -354,6 +354,8 @@
   line-height: 24px;
   background-color: #e75735;
   border-radius: 4px;
+  font-size: 13px;
+  font-weight: 900;
 }
 .slider-block__slider_value-number .ui-slider-handle::after {
   content: '';
@@ -362,9 +364,9 @@
   left: 8px;
 }
 .slider-block__slider_value-number .ui-slider-handle::before {
+  content: '';
   position: absolute;
   z-index: 0;
-  content: '';
   top: 16px;
   left: 36%;
   width: 10px;
@@ -388,7 +390,7 @@
   top: 12px;
   color: #d1d1d1;
   font-size: 11px;
-  font-weight: bold;
+  font-weight: 900;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -415,8 +417,6 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  font-size: 11px;
-  font-weight: bold;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -430,6 +430,7 @@
   text-align: center;
   line-height: 29px;
   font-size: 14px;
+  font-weight: 900;
   cursor: pointer;
   transition: 1s;
 }
@@ -439,8 +440,6 @@
 }
 .form {
   width: 50%;
-  display: flex;
-  flex-direction: column;
 }
 .form__name {
   position: relative;
@@ -464,18 +463,34 @@
   position: absolute;
   top: 0px;
   right: 0px;
-  width: 75px;
+  width: 72px;
   height: 28px;
   border-radius: 5px;
   background-color: #4eb7a8;
   color: #fff;
   text-transform: uppercase;
   font-size: 10px;
-  font-weight: bold;
+  font-weight: 900;
   text-align: center;
   line-height: 28px;
+  letter-spacing: 0.5px;
+}
+.form__text-info::after {
+  position: absolute;
+  content: '';
+  top: 10px;
+  left: -2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background-color: #4eb7a8;
+  transform: rotate(135deg);
+  clip: rect(4px, auto, auto, 4px);
 }
 .form__text-info_error {
+  background-color: #e75735;
+}
+.form__text-info_error::after {
   background-color: #e75735;
 }
 .form__textarea {
@@ -493,6 +508,79 @@
   font-family: 'Lato', sans-serif;
   line-height: 28px;
 }
+.form__tickbox {
+  display: inline-block;
+  position: relative;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  cursor: pointer;
+  border-color: #c0c0c0;
+  transition: 0.5s;
+}
+.form__tickbox::after {
+  position: absolute;
+  content: '';
+  width: 4px;
+  height: 9px;
+  position: absolute;
+  border: 2px solid;
+  border-color: inherit;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+  top: 24%;
+  left: 36%;
+}
+.form__tickbox-input {
+  display: none;
+}
+.form__toggle {
+  display: inline-block;
+  position: relative;
+  width: 59px;
+  height: 24px;
+  border-radius: 24px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.form__toggle-input {
+  display: none;
+}
+.form__toggle-input:checked + .form__toggle-slider {
+  transform: translateX(200%);
+}
+.form__toggle-slider {
+  position: absolute;
+  top: 12.5%;
+  left: 5%;
+  width: 30%;
+  height: 75%;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 1s;
+}
+.form__toggle-slider::after,
+.form__toggle-slider::before {
+  content: 'off';
+  position: absolute;
+  top: 8%;
+  left: 130%;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.form__toggle-slider::before {
+  content: 'on';
+  left: -150%;
+}
+.form__button-submit {
+  background-color: #4eb7a8;
+  color: #fff;
+}
 body {
   font-family: 'Lato', sans-serif;
   width: 700px;
@@ -509,4 +597,20 @@ body {
 .info-circle,
 .slider-block {
   margin: 0 20px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form_left {
+  align-items: flex-end;
+}
+.form_left .button {
+  margin: 0px;
+}
+.form_right {
+  align-items: center;
+}
+.form_right .form_toggles {
+  margin-bottom: 12px;
 }

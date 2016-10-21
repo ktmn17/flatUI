@@ -1,0 +1,26 @@
+.form__tickbox
+  display inline-block
+  position relative
+  width 23px
+  height 23px
+  border-radius 50%
+  cursor pointer
+  border-color #c0c0c0
+  transition .5s
+
+  &::after
+    position absolute
+    content ''
+    width 4px
+    height 9px
+    position absolute
+    border 2px solid
+    border-color inherit
+    border-top none
+    border-left none
+    transform rotate(45deg)
+    top 24%
+    left 36%
+
+.form__tickbox-input
+  display none
