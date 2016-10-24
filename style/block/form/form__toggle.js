@@ -16,6 +16,4 @@ $(function() {
     $('.form__toggle-input, .form__tickbox-input').each( function() {
       change_color(this);
     });
-
-
 });

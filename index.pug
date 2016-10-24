@@ -99,12 +99,12 @@ html(lang="en")
 
       form.form.form_left
         div.form__name
-          input(type="text" value="Your Name").form__text
-          div.form__text-info.form__text-info_error Error
+          input(type="text" placeholder="Your Name").form__text.form__text_name
+          div.form__text-info
         div.form__name
-          input(type="text" value="Your Email").form__text
-          div.form__text-info Thanks!
-        textarea.form__textarea Your Message
+          input(type="email" placeholder="Your Email").form__text.form__text_email
+          div.form__text-info
+        textarea(placeholder="Your Message").form__textarea
         button.button.form__button-submit(type="submit") submit
 
       form.form.form_right
@@ -124,6 +124,60 @@ html(lang="en")
           label.form__tickbox
             input(type="checkbox").form__tickbox-input
 
+    div.container
+      form.form.form_left
+        div.form__search
+          input(type="search" placeholder="Search").form__text.form__search-input
+          button.form__search-button
+        div.form__search
+          input(type="search" placeholder="I've not found what i'm looking for...").form__text.form__search-input.form__search-input_not-found
+          button.form__search-button
+        div.form__select-block
+          select(placeholder="Search").form__select
+            option.form__select-option.form__select-option_no-drop Choose An Option
+            - for (var i = 1; i < 5; i ++)
+              option.form__select-option.form__select-option_drop This is option #{i}
+
+
+      div.user-profiles
+        div.user-profile
+          div.user-profile__photo
+            img(src="style/img/guy.png" alt="guy").user-profile__photo-img
+          div.user-profile__info
+            h2.user-profile__h2 John Smith
+            h3.user-profile__h3 Ux Designer
+            div.user-profile__social-link
+              a(href="https://fb.com")
+                img(src="style/img/fb.png" alt="fb").user-profile__social-link-img
+            div.user-profile__social-link
+              a(href="https://twitter.com")
+                img(src="style/img/tw.png" alt="tw").user-profile__social-link-img
+            div.user-profile__social-link
+              a(href="http://dribbble.com")
+                img(src="style/img/dr.png" alt="dr").user-profile__social-link-img
+
+        div.user-profile.user-profile_alternate
+          div.user-profile__photo
+            img(src="style/img/girl.png" alt="girls").user-profile__photo-img.user-profile__photo-img_girl
+          div.user-profile__info
+            h2.user-profile__h2 Sarah Brown
+            h3.user-profile__h3 Developer
+            div.user-profile__social-link
+              a(href="https://fb.com")
+                img(src="style/img/fb.png" alt="fb").user-profile__social-link-img
+            div.user-profile__social-link
+              a(href="https://twitter.com")
+                img(src="style/img/tw.png" alt="tw").user-profile__social-link-img
+            div.user-profile__social-link
+              a(href="http://dribbble.com")
+                img(src="style/img/dr.png" alt="dr").user-profile__social-link-img
+
+    
+
+
+
+
+
 
 
     script(src="style/block/button/button_ripple.js")
@@ -132,3 +186,5 @@ html(lang="en")
     script(src="style/block/slider-block/slider-block__slider.js")
     script(src="style/block/stages/stages.js")
     script(src="style/block/form/form__toggle.js")
+    script(src="style/block/form/form__text-info.js")
+    script(src="style/block/form/form__select-block.js")

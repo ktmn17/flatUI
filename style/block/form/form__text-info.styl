@@ -1,4 +1,5 @@
 .form__text-info
+  display none
   position absolute
   top 0px
   right 0px
@@ -12,7 +13,7 @@
   font-weight 900
   text-align center
   line-height 28px
-  letter-spacing 0.5px
+  letter-spacing 0.5px  
 
   &::after
     position absolute
@@ -25,3 +26,15 @@
     background-color maincolor
     transform rotate(135deg)
     clip rect(4px, auto, auto, 4px)
+
+  &::before
+    content 'Thanks!'
+
+.form__text-info_error
+  background-color alternatecolor
+
+  &::after
+    background-color alternatecolor
+
+  &::before
+    content 'Error'

@@ -1,14 +1,12 @@
 maincolor = #4eb7a8
 alternatecolor = #e75735
 mainfont = 'Lato', sans-serif
+alternatefont = 'Source Sans Pro', sans-serif
 
 @import "block\button\button.styl"
 @import "block\button\button_ripple.styl"
-@import "block\button\button_size_small.styl"
-@import "block\button\button_color_alternate.styl"
 
 @import "block\arrow-button\arrow-button.styl"
-@import "block\arrow-button\arrow-button_disabled.styl"
 
 @import "block\info-circle\info-circle.styl"
 @import "block\info-circle\info-circle_percentage.styl"
@@ -22,27 +20,28 @@ mainfont = 'Lato', sans-serif
 
 @import "block\stages\stages.styl"
 @import "block\stages\stages__hr.styl"
-@import "block\stages\stages__hr_active.styl"
 @import "block\stages\stages__points.styl"
 @import "block\stages\stages__point.styl"
-@import "block\stages\stages__point_active.styl"
 
 @import "block\form\form.styl"
 @import "block\form\form__name.styl"
 @import "block\form\form__text.styl"
 @import "block\form\form__text-info.styl"
-@import "block\form\form__text-info_error.styl"
 @import "block\form\form__textarea.styl"
 @import "block\form\form__tickbox.styl"
 @import "block\form\form__toggle.styl"
 @import "block\form\form__button-submit.styl"
+@import "block\form\form__search.styl"
+@import "block\form\form__select-block.styl"
 
+@import "block\user-profile\user-profile.styl"
+@import "block\user-profile\user-profile_alternate.styl"
 
 
 body
   font-family mainfont
   width 700px
-  margin 0 0
+  margin 0 0 100px
 
 .container
   display flex
@@ -54,18 +53,23 @@ body
 .button, .arrow-button, .info-circle, .slider-block
   margin 0 20px
 
-.form
+.form, .user-profiles
   display flex
   flex-direction column
 
 .form_left
+  width 50%
   align-items flex-end
 
   .button
     margin 0px
 
-.form_right
+.form_right, .user-profiles
+  width 50%
   align-items center
 
-  .form_toggles
+.form_toggles
     margin-bottom 12px
+
+.user-profile
+  margin-bottom 28px
