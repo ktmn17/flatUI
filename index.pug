@@ -13,6 +13,7 @@ html(lang="en")
     script(src="jQuery_plugins/Inputmask-3.x/js/inputmask.extensions.js")
     script(src="jQuery_plugins/Inputmask-3.x/js/jquery.inputmask.js")
     script(src="jQuery_plugins/jquery-ui-1.12.1.custom/jquery-ui.js")
+    script(src="https://maps.googleapis.com/maps/api/js?v=3.exp")
 
   body
 
@@ -186,6 +187,25 @@ html(lang="en")
           p.article__p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           button.button.button_size_small.article__button Add to calendar
 
+    div.container
+
+      div.map
+        div#gmap_canvas.map__google-map
+        div.map__info
+          div.map__content-info
+            h2.map__h2 Meet us!
+          div.map__content-info
+            h3.map__h3 1259 California ST #[br] San Francisco, CA
+          div.map__content-info
+            div.map__link
+              a(href="#")
+                img(src="style/img/my location.png" alt="fb").map__link-img
+            div.map__link
+              a(href="#")
+                img(src="style/img/pin.png" alt="fb").map__link-img
+
+
+
 
 
 
@@ -197,3 +217,4 @@ html(lang="en")
     script(src="style/block/form/form__toggle.js")
     script(src="style/block/form/form__text-info.js")
     script(src="style/block/form/form__select-block.js")
+    script(src="style/block/map/map.js")
