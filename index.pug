@@ -4,7 +4,7 @@ html(lang="en")
     title flatUI
     meta(charset="UTF-8")
 
-    link(href="https://fonts.googleapis.com/css?family=Lato:300i,400,700,900" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Lato:300i,300,400,900" rel="stylesheet")
     link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet")
     link(href="style/style.css" rel="stylesheet")
 
@@ -172,10 +172,19 @@ html(lang="en")
               a(href="http://dribbble.com")
                 img(src="style/img/dr.png" alt="dr").user-profile__social-link-img
 
-    
+    div.container
+      div.article
+        div.article__text
+          h2.article__h2 It's all going downhill
+          h3.article__h3 24 August 2013
+          p.article__p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.
 
-
-
+      div.article.article_event
+        div.article__text
+          h2.article__h2 #[span.article__number 24] Aug
+          h3.article__h3 This is The Title
+          p.article__p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          button.button.button_size_small.article__button Add to calendar
 
 
 

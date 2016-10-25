@@ -671,7 +671,7 @@
   background: #e5e5e5 url("img/sprite.png") no-repeat 92%;
   color: #888;
   font-size: 14px;
-  outline: none;
+  outline: inherit;
   font-family: 'Source Sans Pro', sans-serif;
   cursor: pointer;
 }
@@ -757,6 +757,73 @@
 .user-profile_alternate .user-profile__social-link {
   filter: brightness(0) invert(1);
 }
+.article {
+  width: 288px;
+  height: 212px;
+  background: url("img/cyclist.png") no-repeat -60% 0%;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.article__text {
+  width: 67%;
+  height: 100%;
+  padding: 20px 20px 0 22px;
+  float: right;
+  background-color: #e75735;
+  color: #fff;
+  box-sizing: border-box;
+}
+.article__h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 27px;
+}
+.article__h3 {
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+}
+.article__p {
+  margin: 0;
+  margin-top: 13px;
+  padding: 0;
+  font-size: 11px;
+  letter-spacing: 0.6px;
+}
+.article_event {
+  background: url("img/street.png") no-repeat -50% 0%;
+}
+.article_event .article__text {
+  background-color: #4eb7a8;
+}
+.article_event .article__h2 {
+  margin: 17px 0 22px -6px;
+  font-size: 30px;
+}
+.article_event .article__number {
+  margin-right: 7px;
+  font-size: 73px;
+}
+.article_event .article__h3 {
+  font-size: 12.5px;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+}
+.article_event .article__p {
+  margin-top: 3px;
+  margin-bottom: 17px;
+}
+.article_event .article__button {
+  width: 128px;
+  margin-left: 8px;
+  letter-spacing: 0.9px;
+}
 body {
   font-family: 'Lato', sans-serif;
   width: 700px;
@@ -771,8 +838,9 @@ body {
 .button,
 .arrow-button,
 .info-circle,
-.slider-block {
-  margin: 0 20px;
+.slider-block,
+.article {
+  margin-right: 20px;
 }
 .form,
 .user-profiles {
