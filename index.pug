@@ -8,6 +8,7 @@ html(lang="en")
     link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet")
     link(href="style/style.css" rel="stylesheet")
 
+
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
     script(src="jQuery_plugins/Inputmask-3.x/js/inputmask.js")
     script(src="jQuery_plugins/Inputmask-3.x/js/inputmask.extensions.js")
@@ -198,14 +199,17 @@ html(lang="en")
             h3.map__h3 1259 California ST #[br] San Francisco, CA
           div.map__content-info
             div.map__link
-              a(href="#")
-                img(src="style/img/my location.png" alt="fb").map__link-img
+              img(src="style/img/my location.png" alt="my location" title="my location").map__link-img.map__link-img_my-location
             div.map__link
-              a(href="#")
-                img(src="style/img/pin.png" alt="fb").map__link-img
+              img(src="style/img/pin.png" alt="our location" title="our location").map__link-img.map__link-img_our-location
 
-
-
+    div.container
+      div.calendar
+        div.calendar__upper
+          h2.calendar__h2 24
+        div.calendar__datepicker
+        div.calendar__under
+          h3.calendar__h3 Today
 
 
 
@@ -218,3 +222,5 @@ html(lang="en")
     script(src="style/block/form/form__text-info.js")
     script(src="style/block/form/form__select-block.js")
     script(src="style/block/map/map.js")
+    script(src="style/block/calendar/datepicker-en-GB.js")
+    script(src="style/block/calendar/calendar.js")

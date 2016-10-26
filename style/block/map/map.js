@@ -1,6 +1,3 @@
-
-
-
     var styles = [{
         "featureType": "administrative.land_parcel",
         "elementType": "labels",
@@ -54,7 +51,6 @@
         name: "Styled Map"
     });
 
-
     function init_map() {
         var myOptions = {
             zoom: 14,
@@ -62,7 +58,7 @@
             mapTypeControlOptions: {
                 mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
             },
-            disableDefaultUI: true
+            disableDefaultUI: true,
         };
         map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
         marker = new google.maps.Marker({
@@ -73,5 +69,23 @@
         map.mapTypes.set('map_style', styledMap);
         map.setMapTypeId('map_style');
 
+
+        $('.map__link-img_my-location').click(function() {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var pos = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+
+                map.setCenter(pos);
+            });
+        });
+
+        $('.map__link-img_our-location').click(function() {
+            map.setCenter(marker.getPosition());
+        });
+
+        map.setMyLocationEnabled(true)
     }
+
     google.maps.event.addDomListener(window, 'load', init_map);

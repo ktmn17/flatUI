@@ -13624,7 +13624,7 @@ var widgetsSlider = $.widget( "ui.slider", $.ui.mouse, {
 
 		this._handleIndex = index;
 
-		this._addClass( closestHandle, null, "ui-state-active" );
+		this._addClass( closestHandle, null, "ui-state-active-slider" );
 		closestHandle.trigger( "focus" );
 
 		offset = closestHandle.offset();
@@ -13659,7 +13659,7 @@ var widgetsSlider = $.widget( "ui.slider", $.ui.mouse, {
 	},
 
 	_mouseStop: function( event ) {
-		this._removeClass( this.handles, null, "ui-state-active" );
+		this._removeClass( this.handles, null, "ui-state-active-slider" );
 		this._mouseSliding = false;
 
 		this._stop( event, this._handleIndex );
