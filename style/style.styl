@@ -23,6 +23,8 @@ alternatefont = 'Source Sans Pro', sans-serif
 @import "block\stages\stages__points.styl"
 @import "block\stages\stages__point.styl"
 
+@import "block\user-photo\user-photo.styl"
+
 @import "block\form\form.styl"
 @import "block\form\form__name.styl"
 @import "block\form\form__text.styl"
@@ -43,8 +45,9 @@ alternatefont = 'Source Sans Pro', sans-serif
 @import "block\map\map.styl"
 
 @import "block\calendar\datepicker.styl"
-@import "block\calendar\datepicker-upper-under.styl"
+@import "block\calendar\datepicker-header-footer.styl"
 
+@import "block\messaging\messaging.styl"
 
 body
   font-family mainfont
@@ -61,8 +64,7 @@ h1, h2, h3
   align-items center
   margin 30px 0
 
-
-.button, .arrow-button, .info-circle, .slider-block, .article:nth-child(1)
+.button, .arrow-button, .info-circle, .slider-block, .article:nth-child(1), .calendar
   margin-right 20px
 
 .form, .user-profiles

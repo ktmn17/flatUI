@@ -438,6 +438,20 @@
   background-color: #e75735;
   color: #fff;
 }
+.user-photo {
+  position: relative;
+  z-index: 2;
+  width: 83px;
+  height: 83px;
+  border: 4px solid #e5e5e5;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.user-photo_img {
+  position: absolute;
+  z-index: 1;
+  left: -30%;
+}
 .form {
   width: 50%;
 }
@@ -665,24 +679,56 @@
   overflow: hidden;
   border-radius: 3px;
 }
-.form__select {
+.ui-selectmenu-menu {
+  border-radius: 3px;
+  padding: 0;
+  margin: 0;
   position: absolute;
-  width: 108%;
+  top: 0;
+  left: 0;
+  display: none;
+  font-family: 'Lato', sans-serif;
+  background: #4eb7a8;
+  color: #fff;
+  text-indent: 10px;
+  outline: inherit;
+  cursor: pointer;
+}
+.ui-selectmenu-menu .ui-menu {
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+  overflow-x: hidden;
+  padding-bottom: 1px;
+  list-style: none;
+}
+.ui-menu li {
+  margin: 15px 0;
+}
+.ui-selectmenu-open {
+  display: block;
+}
+.ui-selectmenu-text {
+  font-family: 'Lato', sans-serif;
+  color: #888;
+  outline: inherit;
+}
+.ui-selectmenu-button.ui-button {
+  position: absolute;
+  width: 100%;
   height: 100%;
-  padding-left: 10px;
   border: none;
-  background: #e5e5e5 url("img/sprite.png") no-repeat 92%;
   color: #888;
   font-size: 14px;
   outline: inherit;
   font-family: 'Source Sans Pro', sans-serif;
+  line-height: 27px;
+  text-indent: 10px;
   cursor: pointer;
+  background: #e5e5e5 url("img/sprite.png") no-repeat right;
 }
-.form__select-option_drop {
-  font-family: 'Lato', sans-serif;
-  background: #4eb7a8;
-  color: #fff;
-  outline: inherit;
+.ui-selectmenu-icon.ui-icon {
+  float: right;
 }
 .user-profile {
   display: flex;
@@ -690,20 +736,8 @@
   justify-content: center;
   width: 100%;
 }
-.user-profile__photo {
-  position: relative;
-  z-index: 2;
-  width: 83px;
-  height: 83px;
-  margin-right: 12px;
-  border: 4px solid #e5e5e5;
-  border-radius: 50%;
-  overflow: hidden;
-}
-.user-profile__photo-img {
-  position: absolute;
-  z-index: 1;
-  left: -30%;
+.user-profile .user-photo {
+  margin: 0 12px;
 }
 .user-profile__info {
   position: relative;
@@ -892,7 +926,6 @@
 }
 .ui-datepicker .ui-datepicker-header {
   position: relative;
-  z-index: 1;
   padding-bottom: 9px;
   font-size: 23px;
   background-color: #d54c2c;
@@ -984,7 +1017,7 @@
   left: 0.5em;
   top: 0.3em;
 }
-.calendar__upper {
+.calendar__header {
   display: flex;
   width: 100%;
   height: 109px;
@@ -996,7 +1029,7 @@
   font-size: 80px;
   font-weight: 300;
 }
-.calendar__under {
+.calendar__footer {
   display: flex;
   height: 49px;
   background-color: #e5e5e5;
@@ -1009,6 +1042,81 @@
   font-weight: 900;
   color: #888;
   text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.messaging {
+  position: relative;
+  width: 287px;
+  border-radius: 3px;
+  background: #f2f2f2;
+  overflow: hidden;
+}
+.messaging__header {
+  width: 100%;
+  height: 115px;
+  background: #46ab9d;
+}
+.messaging__h2 {
+  padding-top: 18px;
+  padding-bottom: 26px;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 32px;
+  color: #fff;
+  font-weight: 300;
+  background: #4eb7a8;
+}
+.messaging__main {
+  width: 84%;
+  margin: 0 auto;
+}
+.messaging__main-header {
+  margin-top: -45px;
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.messaging__icon {
+  margin: 0 5px;
+  cursor: pointer;
+}
+.messaging__icon_camera {
+  position: relative;
+  top: -3px;
+}
+.messaging__textarea-get-message,
+.messaging__textarea-enter-message {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 18px;
+  padding: 20px;
+  padding-top: 18px;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  resize: none;
+  background-color: #fff;
+  color: #868686;
+  font-family: 'Lato', sans-serif;
+  font-size: 12.5px;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+  box-sizing: border-box;
+}
+.messaging__textarea-enter-message {
+  min-height: 88px;
+  margin-bottom: 8px;
+  padding: 17px;
+  padding-top: 13px;
+  background-color: #e5e5e5;
+  border: 3px solid #fff;
+}
+.messaging__button {
+  width: 100%;
+  margin-bottom: 26px;
+  background-color: #4eb7a8;
+  color: #fff;
   letter-spacing: 1px;
 }
 body {
@@ -1032,7 +1140,8 @@ h3 {
 .arrow-button,
 .info-circle,
 .slider-block,
-.article:nth-child(1) {
+.article:nth-child(1),
+.calendar {
   margin-right: 20px;
 }
 .form,

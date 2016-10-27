@@ -1,6 +1,3 @@
-disable_arrow = 12px
-select_width = 288px
-
 .form__select-block
   position relative
   width 288px
@@ -9,21 +6,54 @@ select_width = 288px
   overflow hidden
   border-radius 3px
 
-.form__select
+.ui-selectmenu-menu
+  border-radius 3px
+  padding 0
+  margin 0
   position absolute
-  width 108%
+  top 0
+  left 0
+  display none
+  font-family mainfont
+  background maincolor
+  color white
+  text-indent 10px
+  outline inherit
+  cursor pointer
+
+.ui-selectmenu-menu .ui-menu
+  padding 0
+  margin 0
+  overflow auto
+  overflow-x hidden
+  padding-bottom 1px
+  list-style none
+
+.ui-menu li
+  margin 15px 0
+
+.ui-selectmenu-open
+  display block
+
+.ui-selectmenu-text
+  font-family mainfont
+  color #888888
+  outline inherit
+
+
+.ui-selectmenu-button.ui-button
+  position absolute
+  width 100%
   height 100%
-  padding-left 10px
   border none
-  background #e5e5e5 url('img/sprite.png') no-repeat @width - 16%
   color #888888
   font-size 14px
   outline inherit
   font-family alternatefont
+  line-height 27px
+  text-indent 10px
   cursor pointer
+  background #e5e5e5 url('img/sprite.png') no-repeat right
 
-.form__select-option_drop  
-  font-family mainfont
-  background maincolor
-  color white
-  outline inherit
+.ui-selectmenu-icon.ui-icon
+  float right

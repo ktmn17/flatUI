@@ -11,7 +11,7 @@ $(function() {
         return day + "/" + month + "/" + year;
     }
 
-    $(".calendar__under").click(function() {
+    $(".calendar__footer").click(function() {
         $(".calendar__datepicker").datepicker("setDate", TodaysDate());
     });
 

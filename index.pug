@@ -5,7 +5,7 @@ html(lang="en")
     meta(charset="UTF-8")
 
     link(href="https://fonts.googleapis.com/css?family=Lato:300i,300,400,900" rel="stylesheet")
-    link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet")
     link(href="style/style.css" rel="stylesheet")
 
 
@@ -127,6 +127,7 @@ html(lang="en")
             input(type="checkbox").form__tickbox-input
 
     div.container
+
       form.form.form_left
         div.form__search
           input(type="search" placeholder="Search").form__text.form__search-input
@@ -136,15 +137,14 @@ html(lang="en")
           button.form__search-button
         div.form__select-block
           select(placeholder="Search").form__select
-            option.form__select-option.form__select-option_no-drop Choose An Option
+            option Choose An Option
             - for (var i = 1; i < 5; i ++)
-              option.form__select-option.form__select-option_drop This is option #{i}
-
+              option This is option #{i}
 
       div.user-profiles
         div.user-profile
-          div.user-profile__photo
-            img(src="style/img/guy.png" alt="guy").user-profile__photo-img
+          div.user-photo
+            img(src="style/img/guy.png" alt="guy").user-photo_img
           div.user-profile__info
             h2.user-profile__h2 John Smith
             h3.user-profile__h3 Ux Designer
@@ -159,8 +159,8 @@ html(lang="en")
                 img(src="style/img/dr.png" alt="dr").user-profile__social-link-img
 
         div.user-profile.user-profile_alternate
-          div.user-profile__photo
-            img(src="style/img/girl.png" alt="girls").user-profile__photo-img.user-profile__photo-img_girl
+          div.user-photo
+            img(src="style/img/girl.png" alt="girls").user-photo_img
           div.user-profile__info
             h2.user-profile__h2 Sarah Brown
             h3.user-profile__h3 Developer
@@ -175,6 +175,7 @@ html(lang="en")
                 img(src="style/img/dr.png" alt="dr").user-profile__social-link-img
 
     div.container
+
       div.article
         div.article__text
           h2.article__h2 It's all going downhill
@@ -204,12 +205,28 @@ html(lang="en")
               img(src="style/img/pin.png" alt="our location" title="our location").map__link-img.map__link-img_our-location
 
     div.container
+
       div.calendar
-        div.calendar__upper
+        div.calendar__header
           h2.calendar__h2 24
         div.calendar__datepicker
-        div.calendar__under
+        div.calendar__footer
           h3.calendar__h3 Today
+
+      div.messaging
+        div.messaging__header
+          h2.messaging__h2 Sarah Brown
+        div.messaging__main
+          div.messaging__main-header
+            img(src="style/img/chat.png" alt="chat").messaging__icon.messaging__icon_chat
+            div.user-photo
+              img(src="style/img/girl.png" alt="girls").user-photo_img
+            img(src="style/img/camera.png" alt="camera").messaging__icon.messaging__icon_camera
+          form
+            textarea(readonly).messaging__textarea-get-message Hey! So are we cool to meet at the art gallery? Say 8pm
+            textarea.messaging__textarea-enter-message Yeah that sounds great. See you then.
+            button(type="submit").button.messaging__button Reply
+
 
 
 
