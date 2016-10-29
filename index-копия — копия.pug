@@ -1,0 +1,250 @@
+doctype html
+html(lang="en")
+  head
+    title flatUI
+    meta(charset="UTF-8")
+
+    link(href="https://fonts.googleapis.com/css?family=Lato:300i,300,400,900" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet")
+    link(href="style/style.css" rel="stylesheet")
+
+
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+    script(src="jQuery_plugins/Inputmask-3.x/js/inputmask.js")
+    script(src="jQuery_plugins/Inputmask-3.x/js/inputmask.extensions.js")
+    script(src="jQuery_plugins/Inputmask-3.x/js/jquery.inputmask.js")
+    script(src="jQuery_plugins/jquery-ui-1.12.1.custom/jquery-ui.js")
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqcndKel4IAk-XNsvredjJtehjpWH3eGY&callback=initMap")
+
+    script(src="style/block/button/button_ripple.js")
+    script(src="style/block/info-circle/info-circle_percentage.js")
+    script(src="style/block/info-circle/info-circle_pie-chart.js")
+    script(src="style/block/slider-block/slider-block__slider.js")
+    script(src="style/block/stages/stages.js")
+    script(src="style/block/form/form__toggle.js")
+    script(src="style/block/form/form__text-info.js")
+    script(src="style/block/form/form__select-block.js")
+    script(src="style/block/map/map.js")
+    script(src="style/block/calendar/datepicker-en-GB.js")
+    script(src="style/block/calendar/calendar.js")
+    script(src="style/block/video/video.js")
+
+
+  body
+
+    div.container
+
+      button.button.button_ripple.button_size_small(value="button") button
+      button.button.button_ripple(value="button") button
+      button.button.button_ripple.button_color_alternate(value="button") button
+      button.button.button_ripple.button_size_small.button_color_alternate(value="button") button
+
+
+    div.container
+
+      button.arrow-button(value="arrow-button")
+        svg.arrow-button__svg
+          polyline.arrow-button__svg-polyline(points="19,6 8,17 19,27")
+      button.arrow-button(value="arrow-button")
+        svg.arrow-button__svg
+          polyline.arrow-button__svg-polyline(points="11,6 22,17 11,27")
+      button.arrow-button.arrow-button_disabled(value="arrow-button")
+        svg.arrow-button__svg
+          polyline.arrow-button__svg-polyline(points="19,6 8,17 19,27")
+      button.arrow-button.arrow-button_disabled(value="arrow-button")
+        svg.arrow-button__svg
+          polyline.arrow-button__svg-polyline(points="11,6 22,17 11,27")
+
+
+    div.container
+
+      div.info-circle
+        svg.info-circle__svg
+          circle.info-circle__svg-ring.info-circle__svg-ring_percentage
+        input.info-circle__input-percentage(type="text" value="33")
+
+      div.info-circle
+        svg.info-circle__svg
+          circle.info-circle__svg-ring.info-circle__svg-ring_percentage
+        input.info-circle__input-percentage(type="text" value="66")
+
+      div.info-circle
+        svg.info-circle__svg
+          circle.info-circle__svg-ring.info-circle__svg-ring_percentage
+        input.info-circle__input-percentage(type="text" value="100")
+
+      div.info-circle.info-circle_pie-chart
+        svg.info-circle__svg.info-circle__svg_pie-chart
+          circle.info-circle__svg-ring.info-circle__svg-ring_pie-chart.info-circle__svg-ring_pie-chart_gray
+          circle.info-circle__svg-ring.info-circle__svg-ring_pie-chart.info-circle__svg-ring_pie-chart_maincolor
+          circle.info-circle__svg-ring.info-circle__svg-ring_pie-chart.info-circle__svg-ring_pie-chart_alternatecolor
+          circle.info-circle__svg-ring.info-circle__svg-ring_pie-chart.info-circle__svg-ring_pie-chart_dark-gray
+        div.inputs-pie-chart
+          input.info-circle__input-pie-chart.info-circle__input-pie-chart_gray(type="text" value="100")
+          input.info-circle__input-pie-chart.info-circle__input-pie-chart_maincolor(type="text" value="66")
+          input.info-circle__input-pie-chart.info-circle__input-pie-chart_alternatecolor(type="text" value="33")
+          input.info-circle__input-pie-chart.info-circle__input-pie-chart_dark-gray(type="text" value="10")
+
+
+    div.container
+
+      div.slider-block
+        div.slider-block__slider.slider-block__slider_value-number
+          div.ui-slider-handle
+
+      div.slider-block
+        div.slider-block__slider.slider-block__slider_value-range
+          ul.slider-block__info
+            - for (var i = 0; i < 101; i += 25)
+              li.slider-block__percentage #[span #{i}]
+
+
+    div.container
+
+      div.stages
+        hr.stages__hr
+        hr.stages__hr.stages__hr_active
+        ul.stages__points
+          - for (var i = 1; i < 4; i ++)
+            li.stages__point.stages__point_active #[span #{i}]
+          - for (var i = 4; i < 6; i ++)
+              li.stages__point #[span #{i}]
+
+
+    div.container
+
+      form.form.form_left
+        div.form__name
+          input(type="text" placeholder="Your Name").form__text.form__text_name
+          div.form__text-info
+        div.form__name
+          input(type="email" placeholder="Your Email").form__text.form__text_email
+          div.form__text-info
+        textarea(placeholder="Your Message").form__textarea
+        button.button.form__button-submit(type="submit") submit
+
+      form.form.form_right
+        .form_toggles
+          label.form__toggle
+            input(type="checkbox").form__toggle-input
+            div.form__toggle-slider
+          label.form__toggle
+            input(type="checkbox" checked).form__toggle-input
+            div.form__toggle-slider
+
+        .form_tickboxes
+
+          label.form__tickbox
+            input(type="checkbox" checked).form__tickbox-input
+          label.form__tickbox
+            input(type="checkbox").form__tickbox-input
+
+    div.container
+
+      form.form.form_left
+        div.form__search
+          input(type="search" placeholder="Search").form__text.form__search-input
+          button.form__search-button
+        div.form__search
+          input(type="search" placeholder="I've not found what i'm looking for...").form__text.form__search-input.form__search-input_not-found
+          button.form__search-button
+        div.form__select-block
+          select(placeholder="Search").form__select
+            option Choose An Option
+            - for (var i = 1; i < 5; i ++)
+              option This is option #{i}
+
+      div.user-profiles
+        div.user-profile
+          div.user-photo
+            img(src="style/img/guy.png" alt="guy").user-photo_img
+          div.user-profile__info
+            h2.user-profile__h2 John Smith
+            h3.user-profile__h3 Ux Designer
+            div.user-profile__social-link
+              a(href="https://fb.com")
+                img(src="style/img/fb.png" alt="fb").user-profile__social-link-img
+            div.user-profile__social-link
+              a(href="https://twitter.com")
+                img(src="style/img/tw.png" alt="tw").user-profile__social-link-img
+            div.user-profile__social-link
+              a(href="http://dribbble.com")
+                img(src="style/img/dr.png" alt="dr").user-profile__social-link-img
+
+        div.user-profile.user-profile_alternate
+          div.user-photo
+            img(src="style/img/girl.png" alt="girls").user-photo_img
+          div.user-profile__info
+            h2.user-profile__h2 Sarah Brown
+            h3.user-profile__h3 Developer
+            div.user-profile__social-link
+              a(href="https://fb.com")
+                img(src="style/img/fb.png" alt="fb").user-profile__social-link-img
+            div.user-profile__social-link
+              a(href="https://twitter.com")
+                img(src="style/img/tw.png" alt="tw").user-profile__social-link-img
+            div.user-profile__social-link
+              a(href="http://dribbble.com")
+                img(src="style/img/dr.png" alt="dr").user-profile__social-link-img
+
+    div.container
+
+      div.article
+        div.article__text
+          h2.article__h2 It's all going downhill
+          h3.article__h3 24 August 2013
+          p.article__p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.
+
+      div.article.article_event
+        div.article__text
+          h2.article__h2 #[span.article__number 24] Aug
+          h3.article__h3 This is The Title
+          p.article__p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          button.button.button_size_small.article__button Add to calendar
+
+    div.container
+
+      div.map
+        div#gmap_canvas.map__google-map
+        div.map__info
+          div.map__content-info
+            h2.map__h2 Meet us!
+          div.map__content-info
+            h3.map__h3 1259 California ST #[br] San Francisco, CA
+          div.map__content-info
+            div.map__link
+              img(src="style/img/my location.png" alt="my location" title="my location").map__link-img.map__link-img_my-location
+            div.map__link
+              img(src="style/img/pin.png" alt="our location" title="our location").map__link-img.map__link-img_our-location
+
+    div.container
+
+      div.calendar
+        div.calendar__header
+          h2.calendar__h2 24
+        div.calendar__datepicker
+        div.calendar__footer
+          h3.calendar__h3 Today
+
+      div.messaging
+        div.messaging__header
+          h2.messaging__h2 Sarah Brown
+        div.messaging__main
+          div.messaging__main-header
+            img(src="style/img/chat.png" alt="chat").messaging__icon.messaging__icon_chat
+            div.user-photo
+              img(src="style/img/girl.png" alt="girls").user-photo_img
+            img(src="style/img/camera.png" alt="camera").messaging__icon.messaging__icon_camera
+          form
+            textarea(readonly).messaging__textarea-get-message Hey! So are we cool to meet at the art gallery? Say 8pm
+            textarea.messaging__textarea-enter-message Yeah that sounds great. See you then.
+            button(type="submit").button.messaging__button Reply
+
+    div.container
+
+      div.video
+        h1.video__h1 New Zealand Landscapes Timelapse
+        h3.video__h3 From Bevan Percival
+        h2.video__h2 #[a(href="http://vimeo.com/62980495") http://vimeo.com/62980495]
+        video(width="100%" height="100%")
+          source(src="style/video/movie.mp4" type="video/mp4")

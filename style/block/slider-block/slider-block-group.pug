@@ -1,0 +1,9 @@
+div.slider-block
+  div.slider-block__slider.slider-block__slider_value-number
+    div.ui-slider-handle
+
+div.slider-block
+  div.slider-block__slider.slider-block__slider_value-range
+    ul.slider-block__info
+      - for (var i = 0; i < 101; i += 25)
+        li.slider-block__percentage #[span #{i}]

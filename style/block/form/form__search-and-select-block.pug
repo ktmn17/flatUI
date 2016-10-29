@@ -1,0 +1,12 @@
+form
+  div.form__search
+    input(type="search" placeholder="Search").form__text.form__search-input
+    button.form__search-button
+  div.form__search
+    input(type="search" placeholder="I've not found what i'm looking for...").form__text.form__search-input.form__search-input_not-found
+    button.form__search-button
+  div.form__select-block
+    select(placeholder="Search").form__select
+      option Choose An Option
+      - for (var i = 1; i < 5; i ++)
+        option This is option #{i}

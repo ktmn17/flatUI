@@ -3,6 +3,8 @@ alternatecolor = #e75735
 mainfont = 'Lato', sans-serif
 alternatefont = 'Source Sans Pro', sans-serif
 
+@import "block\container\container.styl"
+
 @import "block\button\button.styl"
 @import "block\button\button_ripple.styl"
 
@@ -52,41 +54,11 @@ alternatefont = 'Source Sans Pro', sans-serif
 @import "block\video\video.styl"
 
 
-body
+.main
   font-family mainfont
   width 700px
-  margin 0 0 100px
+  margin 30px auto
 
 h1, h2, h3
   margin 0px
   padding 0px
-
-.container
-  display flex
-  justify-content center
-  align-items center
-  margin 30px 0
-
-.button, .arrow-button, .info-circle, .slider-block, .article:nth-child(1), .calendar
-  margin-right 20px
-
-.form, .user-profiles
-  display flex
-  flex-direction column
-
-.form_left
-  width 50%
-  align-items flex-end
-
-  .button
-    margin 0px
-
-.form_right, .user-profiles
-  width 50%
-  align-items center
-
-.form_toggles
-    margin-bottom 12px
-
-.user-profile
-  margin-bottom 28px

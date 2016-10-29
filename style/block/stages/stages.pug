@@ -1,0 +1,8 @@
+div.stages
+  hr.stages__hr
+  hr.stages__hr.stages__hr_active
+  ul.stages__points
+    - for (var i = 1; i < 4; i ++)
+      li.stages__point.stages__point_active #[span #{i}]
+    - for (var i = 4; i < 6; i ++)
+        li.stages__point #[span #{i}]
