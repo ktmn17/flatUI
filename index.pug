@@ -31,7 +31,8 @@ body
       h1.container__h1 Form Elements
       .container__content
         .container__left
-          include style/block/form/form__comment.pug
+          form
+            include style/block/form/form__comment.pug
         .container__right
           h1.container__h1 Toggles
           form.container__content
@@ -44,21 +45,16 @@ body
       .container__content
         .container__left
           h1.container__h1 Search / Drop Down
-          .container__content
-            include style/block/form/form__search-and-select-block.pug
+          include style/block/form/form__search-and-select-block.pug
         .container__right
           h1.container__h1 User Profile
-          .container__content
-            include style/block/user-profile/user-profile-group.pug
+          include style/block/user-profile/user-profile-group.pug
 
     .container.container_articles
       h1.container__h1 News & Events
-      .container__left
-        .container__content
-          include style/block/article/article.pug
-      .container__right
-        .container__content
-          include style/block/article/article_event.pug
+      .container__content
+        include style/block/article/article.pug
+        include style/block/article/article_event.pug
 
     .container.container_map
       h1.container__h1 Location
@@ -66,13 +62,12 @@ body
         include style/block/map/map.pug
 
     .container.container_calendar-and-messaging
-      .container__left
-        h1.container__h1 Calendar
-        .container__content
+      .container__content
+        .container__left
+          h1.container__h1 Calendar
           include style/block/calendar/calendar.pug
-      .container__right
-        h1.container__h1 Messaging
-        .container__content
+        .container__right
+          h1.container__h1 Messaging
           include style/block/messaging/messaging.pug
 
     .container.container_video

@@ -1,19 +1,21 @@
 .container {
   width: 100%;
-  margin: 10px auto;
+  margin: 0px auto;
+  padding: 30px 0;
 }
 .container__content {
+  width: 84%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
-  margin: 30px auto;
+  margin: 0px auto;
 }
 .container__left,
 .container__right {
-  display: inline-block;
-  width: 50%;
+  width: 48%;
 }
 .container__h1 {
+  margin-bottom: 30px;
   color: #4f4f4f;
   text-align: center;
   font-family: 'Lato', sans-serif;
@@ -24,7 +26,7 @@
 }
 .container_button-group .container__content {
   align-items: flex-end;
-  width: 78%;
+  width: 70%;
 }
 .container_arrow-button-group .container__content {
   width: 50%;
@@ -32,10 +34,11 @@
 .container_stages .container__content {
   justify-content: center;
 }
-.container_form-elements .container__left .form__comment {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+.container_form-elements .container__left .form__button-submit {
+  float: right;
+}
+.container_form-elements .container__right .container__h1:last-of-type {
+  margin-top: 38px;
 }
 .container_form-elements .container__right .container__content {
   justify-content: center;
@@ -44,12 +47,16 @@
 .container_form-elements .container__right .container__content .form__tickbox {
   margin-right: 10px;
 }
-.container_search-and-user-profile .container__right .container__content {
+.container_search-and-user-profile .container__right {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
 }
-.container_search-and-user-profile .container__right .container__content .user-profile {
-  margin-top: 20px;
+.container_search-and-user-profile .container__right .container__h1 {
+  align-self: center;
+}
+.container_search-and-user-profile .container__right .user-profile:first-of-type {
+  margin-bottom: 20px;
 }
 .button {
   position: relative;
@@ -219,6 +226,7 @@
   position: relative;
   display: inline-block;
   width: 100px;
+  min-width: 100px;
   height: 100px;
   transition: 0.5s;
 }
@@ -297,6 +305,7 @@
 }
 .info-circle_pie-chart {
   width: 200px;
+  min-width: 200px;
 }
 .info-circle__svg_pie-chart {
   width: 50%;
@@ -450,7 +459,7 @@
 }
 .stages {
   position: relative;
-  width: 85%;
+  width: 100%;
 }
 .stages__hr {
   position: absolute;
@@ -507,10 +516,10 @@
 }
 .form__name {
   position: relative;
-  width: 288px;
+  width: 100%;
 }
 .form__text {
-  width: 208px;
+  width: 67%;
   height: 28px;
   margin-bottom: 12px;
   padding-left: 13px;
@@ -528,7 +537,8 @@
   position: absolute;
   top: 0px;
   right: 0px;
-  width: 72px;
+  width: 28%;
+  min-width: 72px;
   height: 28px;
   border-radius: 5px;
   background-color: #4eb7a8;
@@ -565,7 +575,7 @@
   content: 'Error';
 }
 .form__textarea {
-  width: 288px;
+  width: 100%;
   height: 88px;
   padding: 10px;
   resize: none;
@@ -654,7 +664,7 @@
 }
 .form__search {
   position: relative;
-  width: 288px;
+  width: 100%;
   height: 28px;
   margin-bottom: 12px;
   outline: none;
@@ -723,7 +733,7 @@
 }
 .form__select-block {
   position: relative;
-  width: 288px;
+  width: 100%;
   height: 28px;
   outline: none;
   overflow: hidden;
@@ -784,7 +794,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 100%;
+  min-width: 280px;
 }
 .user-profile .user-photo {
   margin: 0 12px;
@@ -845,6 +855,7 @@
 }
 .article {
   width: 288px;
+  min-width: 288px;
   height: 212px;
   background: url("img/cyclist.png") no-repeat -60% 0%;
   border-radius: 3px;
@@ -914,7 +925,7 @@
   position: relative;
   overflow: hidden;
   height: 272px;
-  width: 594px;
+  width: 100%;
   border-radius: 3px;
   -webkit-transform: translate3d(0px, 0px, 0px);
 }
@@ -964,7 +975,7 @@
   cursor: pointer;
 }
 .calendar {
-  width: 279px;
+  width: 100%;
   border-radius: 3px;
   overflow: hidden;
 }
@@ -1096,7 +1107,7 @@
 }
 .messaging {
   position: relative;
-  width: 287px;
+  width: 100%;
   border-radius: 3px;
   background: #f2f2f2;
   overflow: hidden;
@@ -1171,7 +1182,8 @@
 }
 .video {
   position: relative;
-  width: 594px;
+  width: 610px;
+  min-width: 610px;
   height: 336px;
   overflow: hidden;
   border-radius: 5px;
@@ -1345,7 +1357,7 @@
   font-size: 0;
   color: #000;
   position: relative;
-  left: 14px;
+  left: 7px;
   top: 22px;
   width: 8%;
   cursor: pointer;
